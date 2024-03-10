@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="2024-03-01 23-50" author="Eltex">
+
+        <createTable tableName="users">
+
+            <column name="id" type="bigint">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="application_name" type="text"/>
+
+            <column name="loading_time" type="text"/>
+
+            <column name="launch_time" type="text"/>
+
+        </createTable>
+
+        <createTable tableName="applications">
+
+            <column name="id" type="bigint">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="first_name" type="text"/>
+
+            <column name="last_name" type="text"/>
+
+            <column name="login" type="text"/>
+
+            <column name="role" type="text"/>
+
+            <column name="created_at" type="bigint"/>
+
+            <column name="user_id" type="bigint"/>
+
+        </createTable>
+
+        <addForeignKeyConstraint  baseColumnNames="user_id"
+                                  baseTableName="applications"
+                                  constraintName="applications_users_fk"
+                                  referencedColumnNames="id"
+                                  referencedTableName="users"/>
+
+    </changeSet>
+
+</databaseChangeLog>
