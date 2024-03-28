@@ -1,4 +1,4 @@
-package ru.youngstanis.applicationlauncher;
+package com.launcher.api;
 
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Mono;

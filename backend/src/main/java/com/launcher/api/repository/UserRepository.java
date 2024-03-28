@@ -1,8 +1,8 @@
-package ru.youngstanis.applicationlauncher.repository;
+package com.launcher.api.repository;
 
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
 import reactor.core.publisher.Mono;
-import ru.youngstanis.applicationlauncher.entities.User;
+import com.launcher.api.entities.User;
 
 public interface UserRepository extends R2dbcRepository<User, Long> {
 

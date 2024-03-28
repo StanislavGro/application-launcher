@@ -1,4 +1,4 @@
-package ru.youngstanis.applicationlauncher.entities;
+package com.launcher.api.entities;
 
 public enum Role {
     USER,

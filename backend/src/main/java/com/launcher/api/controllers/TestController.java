@@ -1,4 +1,4 @@
-package ru.youngstanis.applicationlauncher.controllers;
+package com.launcher.api.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

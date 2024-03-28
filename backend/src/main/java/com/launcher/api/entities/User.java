@@ -1,8 +1,8 @@
-package ru.youngstanis.applicationlauncher.entities;
+package com.launcher.api.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-import ru.youngstanis.applicationlauncher.constants.TableNameConstants;
+import com.launcher.api.constants.TableNameConstants;
 
 import java.time.LocalDateTime;
 import java.util.Objects;

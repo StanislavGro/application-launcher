@@ -1,9 +1,8 @@
-package ru.youngstanis.applicationlauncher.dto;
+package com.launcher.api.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import ru.youngstanis.applicationlauncher.entities.User;
+import com.launcher.api.entities.User;
 
 import java.time.LocalDateTime;
 import java.util.Objects;

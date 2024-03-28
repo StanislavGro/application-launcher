@@ -1,4 +1,4 @@
-package ru.youngstanis.applicationlauncher.constants;
+package com.launcher.api.constants;
 
 public final class TableNameConstants {
     public static final String APPLICATION_TABLE = "applications";

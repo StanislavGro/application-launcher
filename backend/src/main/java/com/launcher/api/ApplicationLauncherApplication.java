@@ -1,4 +1,4 @@
-package ru.youngstanis.applicationlauncher;
+package com.launcher.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

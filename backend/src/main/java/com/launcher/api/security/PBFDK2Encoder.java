@@ -1,4 +1,4 @@
-package ru.youngstanis.applicationlauncher.security;
+package com.launcher.api.security;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;

@@ -1,10 +1,10 @@
-package ru.youngstanis.applicationlauncher.controllers;
+package com.launcher.api.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.youngstanis.applicationlauncher.entities.Application;
+import com.launcher.api.entities.Application;
 
 import java.util.Collections;
 import java.util.List;

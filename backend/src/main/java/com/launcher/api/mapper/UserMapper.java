@@ -1,9 +1,9 @@
-package ru.youngstanis.applicationlauncher.mapper;
+package com.launcher.api.mapper;
 
+import com.launcher.api.entities.User;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
-import ru.youngstanis.applicationlauncher.dto.UserDto;
-import ru.youngstanis.applicationlauncher.entities.User;
+import com.launcher.api.dto.UserDto;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {

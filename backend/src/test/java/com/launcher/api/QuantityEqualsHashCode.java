@@ -1,4 +1,4 @@
-package ru.youngstanis.applicationlauncher;
+package com.launcher.api;
 
 public class QuantityEqualsHashCode {
 
