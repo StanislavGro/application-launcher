@@ -1,6 +1,7 @@
 import axios from "axios";
+import {authService} from "../core/service/AuthService";
 
-export const instanse = axios.create({
+export const instance = axios.create({
     // Cookie
     withCredentials: true,
     baseURL: "http://localhost:8080/",
@@ -10,7 +11,7 @@ export const instanse = axios.create({
  * Request interceptor
  * Set all request accessToken from localStorage
  */
-instanse.interceptors.request.use(
+instance.interceptors.request.use(
     (config) => {
         config.headers.Authorization = `Bearer ${localStorage.getItem("token")}`
         return config
@@ -20,7 +21,7 @@ instanse.interceptors.request.use(
 /**
  * Response interceptor
  */
-instanse.interceptors.response.use(
+instance.interceptors.response.use(
     (config) => {
         return config
     },
@@ -33,10 +34,10 @@ instanse.interceptors.response.use(
             !error.config._isRetry
         ) {
             try {
-                const resp = await instanse.get("/api/refresh")
-                localStorage.setItem("token", resp.data.accessToken);
+                const response = await authService.refreshToken()
+                localStorage.setItem("token", response.data.accessToken);
 
-                return instanse.request(originalRequest)
+                return instance.request(originalRequest)
             } catch (error) {
                 console.log("Authorization error..")
             }
