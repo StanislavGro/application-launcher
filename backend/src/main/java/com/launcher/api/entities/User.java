@@ -3,6 +3,8 @@ package com.launcher.api.entities;
 import com.launcher.api.constants.TableNameConstants;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
+
 import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Set;
@@ -14,7 +16,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Builder(setterPrefix = "with")
 @Table(name = TableNameConstants.USER_TABLE)
-public class User {
+public class User implements GrantedAuthority {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -71,5 +73,10 @@ public class User {
     @Override
     public int hashCode() {
         return this.getClass().hashCode();
+    }
+
+    @Override
+    public String getAuthority() {
+        return String.format("ROLE_%s", Role.USER);
     }
 }
